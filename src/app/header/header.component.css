@@ -1,0 +1,11 @@
+.nav-active::before {
+  content: "{";
+  position: absolute;
+  left: -10px;
+}
+
+.nav-active::after {
+  content: "}";
+  position: absolute;
+  right: -10px;
+}

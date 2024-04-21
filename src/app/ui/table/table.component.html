@@ -1,0 +1,20 @@
+<hlm-table class="w-full min-w-[400px]">
+  <!-- <hlm-caption>A list of your recent invoices.</hlm-caption> -->
+  <hlm-trow>
+    <hlm-th class="w-52">Maquina</hlm-th>
+    <hlm-th class="w-60">Plataforma</hlm-th>
+    <hlm-th class="flex-1">Dificultad</hlm-th>
+  </hlm-trow>
+  @for (machine of machines; track machine.machine) {
+  <hlm-trow>
+    <hlm-td
+      (click)="linkwriteup(machine.link)"
+      truncate
+      class="w-52 font-medium hover:cursor-pointer"
+      >{{ machine.machine }}</hlm-td
+    >
+    <hlm-td class="w-60">{{ machine.platform }}</hlm-td>
+    <hlm-td class="flex-1">{{ machine.difficulty }}</hlm-td>
+  </hlm-trow>
+  }
+</hlm-table>
