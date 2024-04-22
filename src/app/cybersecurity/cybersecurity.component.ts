@@ -1,4 +1,4 @@
-import { Component, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { TableComponent } from '../ui/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CybersecurityService } from './cybersecurity.service';
@@ -31,7 +31,6 @@ export class CybersecurityComponent {
 
   ngOnInit() {
     this.fetchWriteups();
-    console.log(this.linkWriteup);
     // Suscribirse a los cambios en el servicio
     this.linkWriteupSubscription =
       this.cybersecurityService.linkWriteupSubject.subscribe(
@@ -39,7 +38,7 @@ export class CybersecurityComponent {
           this.linkWriteup = newLinkWriteup;
         }
       );
-    //newLinkWriteup captura el valor recién emitido por el linkWriteupSubject
+    // newLinkWriteup captura el valor recién emitido por el linkWriteupSubject
   }
 
   ngOnDestroy() {

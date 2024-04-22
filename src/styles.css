@@ -1,11 +1,13 @@
 /* @import '@angular/cdk/overlay-prebuilt.css'; */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-sans: "";
+  font-family: "JetBrains Mono", monospace;
+  /* --font-sans: ""; */
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
   --card: 0 0% 100%;

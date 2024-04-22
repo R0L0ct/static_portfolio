@@ -1,5 +1,45 @@
-<div class="bg-background text-foreground h-screen flex justify-center pt-10">
+<div
+  class="bg-background text-foreground min-h-screen flex items-center flex-col pt-10"
+>
   <div class="h-10 w-full flex justify-center items-center">
     <h3 class="text-2xl font-bold">Proyectos</h3>
+  </div>
+  <div class="flex justify-center w-full pt-5 flex-wrap">
+    @for (website of websites; track website.id){
+    <div class="flex flex-col items-center gap-4 p-2">
+      <p class="font-bold">{{ website.title }}</p>
+      <div
+        class="w-96 rounded border-4 hover:scale-105 hover:cursor-pointer"
+        (click)="openLink(website.link)"
+      >
+        <img src="{{ website.image }}" alt="{{ website.title }}" />
+      </div>
+      <div class="text-sm flex flex-col justify-center gap-1">
+        <div class="flex gap-2">
+          <p class="font-bold">Descripcion:</p>
+          <p>{{ website.description }}</p>
+        </div>
+        <div class="flex gap-2">
+          <p class="font-bold">Repositorio:</p>
+          <a
+            href="{{ website.repository }}"
+            target="_blank"
+            class="hover:text-blue-600"
+          >
+            {{ website.repository }}
+          </a>
+        </div>
+        <div class="flex gap-2">
+          <p class="font-bold">Vercel:</p>
+          <a
+            href="{{ website.link }}"
+            target="_blank"
+            class="hover:text-blue-600"
+            >{{ website.link }}</a
+          >
+        </div>
+      </div>
+    </div>
+    }
   </div>
 </div>

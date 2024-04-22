@@ -20,6 +20,9 @@ import { EventEmitter } from 'stream';
     HlmThComponent,
     HlmTrowComponent,
   ],
+  host: {
+    class: 'w-full overflow-x-auto',
+  },
   templateUrl: './table.component.html',
   styleUrl: './table.component.css',
 })
@@ -27,23 +30,25 @@ export class TableComponent {
   constructor(private writeupService: CybersecurityService) {}
 
   linkwriteup(link: string) {
-    // this.writeupService.linkWriteup = link;
+    this.writeupService.linkWriteup = link;
     this.writeupService.actualizarLinkWriteup(link);
   }
 
   protected machines: {
-    machine: string;
+    id: number;
+    name: string;
     platform: string;
     difficulty: string;
-    link: string;
+    path: string;
   }[] = [];
 
   ngOnInit() {
     this.machines = this.writeupService.writeups.map((data) => ({
-      machine: data.machineName,
+      id: data.id,
+      name: data.name,
       platform: data.platform,
       difficulty: data.difficulty,
-      link: data.link,
+      path: data.path,
     }));
   }
 }

@@ -7,22 +7,22 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class CybersecurityService {
-  private baseUrl = 'http://localhost:3000/writeups/';
   writeups: Writeup[] = [];
-  linkWriteup: string = '';
+  linkWriteup: string = '/assets/pdfs/Future.pdf';
 
   // Subject para notificar cambios en linkWriteup
-  // Un BehaviorSubject es un tipo especial de observable que siempre emite un valor inicial, incluso si no hay suscriptores en ese momento. En este caso, se inicializa con una cadena de texto vacía ('').
-  linkWriteupSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  // Un BehaviorSubject es un tipo especial de observable que siempre emite un valor inicial, incluso si no hay suscriptores en ese momento.
+  linkWriteupSubject: BehaviorSubject<string> = new BehaviorSubject<string>(
+    this.linkWriteup
+  );
 
   // Método para actualizar el valor de linkWriteup y notificar a los suscriptores
   actualizarLinkWriteup(nuevoValor: string) {
-    this.linkWriteup = nuevoValor;
     this.linkWriteupSubject.next(nuevoValor);
   }
 
   constructor(private http: HttpClient) {}
   getWriteups() {
-    return this.http.get<Writeup[]>(this.baseUrl);
+    return this.http.get<Writeup[]>('/assets/db/machines.json');
   }
 }
