@@ -21,7 +21,7 @@ import { EventEmitter } from 'stream';
     HlmTrowComponent,
   ],
   host: {
-    class: 'w-full overflow-x-auto',
+    class: 'w-fit overflow-x-auto',
   },
   templateUrl: './table.component.html',
   styleUrl: './table.component.css',

@@ -1,33 +1,9 @@
-<!-- <div class="md:overflow-x-auto flex justify-center w-[800px]">
-  <hlm-table class="">
-    <!-- <hlm-caption>A list of your recent invoices.</hlm-caption> -->
-<!-- <hlm-trow class="">
-      <hlm-th class="">Maquina</hlm-th>
-
-      <hlm-th class="">Plataforma</hlm-th>
-      <hlm-th class="">Dificultad</hlm-th>
-    </hlm-trow>
-    @for (machine of machines; track machine.id) {
-    <hlm-trow class="">
-      <hlm-td
-        (click)="linkwriteup(machine.path)"
-        truncate
-        class="font-medium hover:cursor-pointer"
-        >{{ machine.name }}</hlm-td
-      >
-      <hlm-td class="">{{ machine.platform }}</hlm-td>
-      <hlm-td class="">{{ machine.difficulty }}</hlm-td>
-    </hlm-trow>
-    }
-  </hlm-table> -->
-<!-- </div> -->
-
-<hlm-table class="w-full min-w-[400px]">
+<hlm-table class="w-fit min-w-[400px]">
   <!-- <hlm-caption>A list of your recent invoices.</hlm-caption> -->
   <hlm-trow>
-    <hlm-th class="w-52">Invoice</hlm-th>
-    <hlm-th class="w-60">Status</hlm-th>
-    <hlm-th class="flex-1">Method</hlm-th>
+    <hlm-th class="w-52 md:w-40 md:text-xs">Maquina</hlm-th>
+    <hlm-th class="w-60 md:w-40 md:text-xs">Plataforma</hlm-th>
+    <hlm-th class="flex-1 md:text-xs">Dificultad</hlm-th>
     <!-- <hlm-th class="w-40 justify-end">Amount</hlm-th> -->
   </hlm-trow>
   @for (machine of machines; track machine.id) {
@@ -35,11 +11,11 @@
     <hlm-td
       (click)="linkwriteup(machine.path)"
       truncate
-      class="w-52 font-medium"
+      class="w-52 font-medium md:w-40 md:text-xs"
       >{{ machine.name }}</hlm-td
     >
-    <hlm-td class="w-60">{{ machine.platform }}</hlm-td>
-    <hlm-td class="flex-1">{{ machine.difficulty }}</hlm-td>
+    <hlm-td class="w-60 md:w-40 md:text-xs">{{ machine.platform }}</hlm-td>
+    <hlm-td class="flex-1 md:text-xs">{{ machine.difficulty }}</hlm-td>
     <!-- <hlm-td class="w-40 justify-end">{{ invoice.totalAmount }}</hlm-td> -->
   </hlm-trow>
   }
