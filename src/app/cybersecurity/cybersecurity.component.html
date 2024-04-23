@@ -5,10 +5,14 @@
     <h3 class="text-2xl font-bold md:text-xl">Write-ups</h3>
   </div>
   <div class="flex min-h-[350px] w-full justify-center p-1 items-center">
+    @if (!isLoading) {
     <app-table />
+    }@else {
+    <spartan-spinner />
+    }
   </div>
   <div
-    class="w-9/12 h-[800px] flex justify-center md:w-full pt-5 overflow-x-auto"
+    class="w-9/12 h-[800px] flex justify-center md:w-full pt-5 overflow-x-auto pb-10"
   >
     <iframe
       [src]="getSafeUrl()"

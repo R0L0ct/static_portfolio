@@ -5,16 +5,18 @@ import { CybersecurityService } from './cybersecurity.service';
 import { Writeup } from './cybersecurity.interface';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
+import { SpinnerPreviewComponent } from '../ui/spinner/spinner.component';
 @Component({
   selector: 'app-cybersecurity',
   standalone: true,
-  imports: [TableComponent, HttpClientModule],
+  imports: [TableComponent, HttpClientModule, SpinnerPreviewComponent],
   templateUrl: './cybersecurity.component.html',
   styleUrl: './cybersecurity.component.css',
 })
 export class CybersecurityComponent {
   writeups: Writeup[] = [];
   linkWriteup: string;
+  isLoading: boolean = true;
   private linkWriteupSubscription: Subscription;
 
   constructor(
@@ -30,7 +32,6 @@ export class CybersecurityComponent {
   }
 
   ngOnInit() {
-    this.fetchWriteups();
     // Suscribirse a los cambios en el servicio
     this.linkWriteupSubscription =
       this.cybersecurityService.linkWriteupSubject.subscribe(
@@ -39,6 +40,7 @@ export class CybersecurityComponent {
         }
       );
     // newLinkWriteup captura el valor recién emitido por el linkWriteupSubject
+    this.fetchWriteups();
   }
 
   ngOnDestroy() {
@@ -50,6 +52,7 @@ export class CybersecurityComponent {
     this.cybersecurityService.getWriteups().subscribe((writeups) => {
       this.writeups = writeups;
       this.cybersecurityService.writeups = writeups;
+      this.isLoading = false;
     });
   }
 }

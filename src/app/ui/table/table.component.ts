@@ -8,7 +8,6 @@ import {
 } from '@spartan-ng/ui-table-helm';
 import { Writeup } from '../../cybersecurity/cybersecurity.interface';
 import { CybersecurityService } from '../../cybersecurity/cybersecurity.service';
-import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-table',

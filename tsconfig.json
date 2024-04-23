@@ -30,6 +30,9 @@
       ],
       "@spartan-ng/ui-button-helm": [
         "./components/ui-button-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-spinner-helm": [
+        "./components/ui-spinner-helm/src/index.ts"
       ]
     }
   },
