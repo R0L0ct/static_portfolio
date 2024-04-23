@@ -26,9 +26,14 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    if (this.isMenuOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
   }
-
   closeMenu() {
     this.isMenuOpen = false;
+    document.body.classList.remove('modal-open');
   }
 }
