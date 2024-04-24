@@ -9,7 +9,7 @@
     <div class="flex flex-col items-center gap-4 p-2 xs:border-b-[1px]">
       <p class="font-bold xs:text-base">{{ website.title }}</p>
       <div
-        class="w-96 xs:w-full xs:hover:scale-0 rounded border-4 hover:scale-105 hover:cursor-pointer"
+        class="w-96 xs:w-full md:hover:transform-none rounded border-4 hover:scale-105 hover:cursor-pointer"
         (click)="openLink(website.link)"
       >
         <img src="{{ website.image }}" alt="{{ website.title }}" />
