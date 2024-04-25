@@ -4,23 +4,24 @@
     "title": "Hardcore Clothes",
     "image": "/assets/images/hardcore-clothes.png",
     "link": "https://integrador-react-plum.vercel.app/",
-    "repository": "https://github.com/R0L0ct/Integrador_React",
-    "description": "Pagina Web creada con ReactJs"
+    "frontRepository": "https://github.com/R0L0ct/Integrador_React",
+    "backRepository": "https://github.com/R0L0ct/integrador-backend",
+    "description": "Pagina Web creada con ReactJs, NodeJs, MongoDB y Prisma"
   },
   {
     "id": 2,
     "title": "StrongFit",
     "image": "/assets/images/strongfit.png",
     "link": "https://entrega-5-java-script.vercel.app/",
-    "repository": "https://github.com/R0L0ct/Entrega-5-JavaScript",
-    "description": "Pagina Web creada con JavaScript"
+    "frontRepository": "https://github.com/R0L0ct/Entrega-5-JavaScript",
+    "description": "Pagina Web creada con HTML, CSS y JavaScript Vanilla"
   },
   {
     "id": 3,
     "title": "FireLand",
     "image": "/assets/images/fireland.png",
     "link": "https://trabajo-integrador-three.vercel.app/",
-    "repository": "https://github.com/R0L0ct/Proyecto_Integrador",
-    "description": "Pagina Web creada con CSS"
+    "frontRepository": "https://github.com/R0L0ct/Proyecto_Integrador",
+    "description": "Pagina Web creada con HTML y CSS"
   }
 ]

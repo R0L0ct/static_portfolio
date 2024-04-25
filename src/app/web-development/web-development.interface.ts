@@ -3,6 +3,7 @@ export interface Website {
   title: string;
   image: string;
   link: string;
-  repository: string;
+  frontRepository: string;
+  backRepository?: string;
   description: string;
 }

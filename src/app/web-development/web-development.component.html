@@ -17,18 +17,29 @@
       <div
         class="text-sm xs:text-xs flex flex-col justify-center gap-1 items-center"
       >
-        <div class="flex gap-2">
-          <p>{{ website.description }}</p>
+        <div class="flex gap-2 p-2">
+          <p class="text-center">{{ website.description }}</p>
         </div>
         <div class="flex gap-2 xs:gap-1 items-center">
           <ng-icon name="bootstrapGithub" class="" />
           <p
             class="font-bold hover:cursor-pointer hover:text-blue-600"
-            (click)="openLink(website.repository)"
+            (click)="openLink(website.frontRepository)"
           >
-            Repositorio
+            Front-Repo
           </p>
         </div>
+        @if (website.backRepository) {
+        <div class="flex gap-2 xs:gap-1 items-center">
+          <ng-icon name="bootstrapGithub" class="" />
+          <p
+            class="font-bold hover:cursor-pointer hover:text-blue-600"
+            (click)="openLink(website.backRepository)"
+          >
+            Back-Repo
+          </p>
+        </div>
+        }
         <div class="flex gap-2 xs:gap-1 items-center">
           <p
             class="font-bold hover:cursor-pointer hover:text-blue-600"
