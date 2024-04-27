@@ -6,7 +6,7 @@
     "link": "https://integrador-react-plum.vercel.app/",
     "frontRepository": "https://github.com/R0L0ct/Integrador_React",
     "backRepository": "https://github.com/R0L0ct/integrador-backend",
-    "description": "Pagina Web creada con ReactJs, NodeJs, MongoDB y Prisma"
+    "description": "Website built with ReactJs, NodeJs, MongoDB and Prisma"
   },
   {
     "id": 2,
@@ -14,7 +14,7 @@
     "image": "/assets/images/strongfit.png",
     "link": "https://entrega-5-java-script.vercel.app/",
     "frontRepository": "https://github.com/R0L0ct/Entrega-5-JavaScript",
-    "description": "Pagina Web creada con HTML, CSS y JavaScript Vanilla"
+    "description": "Website built with HTML, CSS and vanilla JavaScript"
   },
   {
     "id": 3,
@@ -22,6 +22,6 @@
     "image": "/assets/images/fireland.png",
     "link": "https://trabajo-integrador-three.vercel.app/",
     "frontRepository": "https://github.com/R0L0ct/Proyecto_Integrador",
-    "description": "Pagina Web creada con HTML y CSS"
+    "description": "Website built with HTML and CSS"
   }
 ]

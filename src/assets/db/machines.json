@@ -33,5 +33,12 @@
     "platform": "Vulnhub",
     "difficulty": "Easy",
     "path": "/assets/pdfs/The_Necromancer.pdf"
+  },
+  {
+    "id": 6,
+    "name": "Code",
+    "platform": "Vulnyx",
+    "difficulty": "Easy",
+    "path": "/assets/pdfs/Code.pdf"
   }
 ]

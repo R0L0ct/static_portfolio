@@ -20,7 +20,7 @@ import { CybersecurityService } from '../../cybersecurity/cybersecurity.service'
     HlmTrowComponent,
   ],
   host: {
-    class: 'w-fit overflow-x-auto',
+    class: 'w-fit overflow-x-auto overflow-y-auto',
   },
   templateUrl: './table.component.html',
   styleUrl: './table.component.css',
