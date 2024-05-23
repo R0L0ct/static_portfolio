@@ -23,5 +23,14 @@
     "link": "https://trabajo-integrador-three.vercel.app/",
     "frontRepository": "https://github.com/R0L0ct/Proyecto_Integrador",
     "description": "Website built with HTML and CSS"
+  },
+  {
+    "id": 4,
+    "title": "The Market",
+    "image": "/assets/images/the_market.png",
+    "link": "https://ecommerce-frontend-dusky.vercel.app/",
+    "frontRepository": "https://github.com/R0L0ct/ecommerce_frontend",
+    "backRepository": "https://github.com/R0L0ct/ecommerce_backend",
+    "description": "Website built with NextJs, NestJs and Postgres"
   }
 ]
