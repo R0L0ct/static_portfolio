@@ -31,6 +31,6 @@
     "link": "https://ecommerce-frontend-dusky.vercel.app/",
     "frontRepository": "https://github.com/R0L0ct/ecommerce_frontend",
     "backRepository": "https://github.com/R0L0ct/ecommerce_backend",
-    "description": "Website built with NextJs, NestJs and Postgres"
+    "description": "Website built with NextJs, NestJs, Postgres and Prisma"
   }
 ]
